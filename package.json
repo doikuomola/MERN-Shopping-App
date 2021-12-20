@@ -1,0 +1,26 @@
+{
+  "name": "shoppingapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "david",
+  "license": "MIT",
+  "scripts": {
+    "start": "node api/server.js",
+    "server": "nodemon api/server.js",
+    "client": "cd client && yarn start",
+    "dev": "concurrently \"yarn server\" \"yarn client\"",
+    "data:import": "node api/seederScript.js"
+  },
+  "dependencies": {
+    "concurrently": "^6.4.0",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.1",
+    "morgan": "^1.10.0",
+    "node-paystack": "^1.0.3",
+    "nodemon": "^2.0.15",
+    "react-paystack": "^3.0.5"
+  }
+}
